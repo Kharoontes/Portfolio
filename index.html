@@ -1,205 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="CSS/scrollbar.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
-	<link rel="icon" href="addons/vers.blanca.ico">
-    <title>Kharoontes</title>
-
-	<!-- --------------------------------- CSS --------------------------------- -->
-
-	<link rel="stylesheet" href="CSS\bootstrap.css" class="rel">
-	<link rel="stylesheet" href="CSS/scrollbar.css" class="rel">
-	<link rel="stylesheet" href="CSS/index.css" class="rel">
-	<link rel="stylesheet" href="CSS/sections.css" class="rel">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-	
-	<!-- ------------------------------- SCRIPTS ------------------------------- -->
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/3352019508.js" crossorigin="anonymous"></script>
-
-<!-- ------------------- agregar sass o otros frameworks ------------------- -->
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>José Dario Novoa | Portfolio</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ------------------------------- NAVBAR -------------------------------- -->
-	
-	<nav  id="navbarfocus" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" >
-		<div class="container-fluid" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-			<a class="navbar-brand" href="#">
-				<img src="addons/logo al 150.png" alt="" width="auto" height="30">
-			</a>
-		<button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse " id="navbarSupportedContent">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-			<li class="nav-item ">
-				<a class="nav-link" aria-current="page" href="#About_Me">About Me</a>
-			</li>
-			<li class="nav-item ">
-				<a class="nav-link" href="#Projects">Projects</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#Contact">Contact</a>
-	</li>
-	
-	</ul>
-		</div>
-		</div>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-4">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-white" href="#">Folioblor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center gap-4">
+          <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+          <li class="nav-item">
+            <a href="#contact" class="btn btn-primary-custom btn-sm">Get in touch</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-	<!-- ------------------------------ SECTIONS ------------------------------- -->
+  <!-- Hero Section -->
+  <header class="hero-section container my-5">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <span class="text-uppercase tracking-wider text-muted small fw-semibold">Hey, I'm a</span>
+        <h1 class="display-3 fw-bold text-white mt-2 mb-4">Software Developer & Creative Director</h1>
+        <p class="text-muted lead mb-5">Construyendo soluciones de software, ingeniería y experiencias visuales que conectan y convierten.</p>
+        
+        <!-- Grid de especialidades (Estilo de la imagen de referencia) -->
+        <div class="row g-3 text-muted small">
+          <div class="col-6 col-md-3">
+            <span class="text-white fw-bold d-block">01</span> Brand Strategy
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="text-white fw-bold d-block">02</span> UI/UX Design
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="text-white fw-bold d-block">03</span> Software & .NET
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="text-white fw-bold d-block">04</span> Photography
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center">
+        <!-- Imagen o silueta principal -->
+        <div class="custom-card p-3">
+          <img src="tu-imagen.jpg" alt="Perfil" class="img-fluid rounded-4">
+        </div>
+      </div>
+    </div>
+  </header>
 
+  <!-- Section: Proyectos / Galería -->
+  <section id="projects" class="container py-5">
+    <div class="row mb-5 align-items-end">
+      <div class="col-md-6">
+        <span class="text-orange small fw-semibold text-uppercase" style="color: var(--accent-color);">Behind the Designs</span>
+        <h2 class="display-5 fw-bold text-white mt-1">Shaping Experiences That Make Life Simpler</h2>
+      </div>
+      <div class="col-md-6 text-md-end mt-3 mt-md-0">
+        <p class="text-muted mb-0">Enfoque en interfaces limpias, intuitivas y código robusto que resuelven problemas reales.</p>
+      </div>
+    </div>
 
-	<!-- ------------------------------ ABOUT ME ------------------------------- -->
-<section>
-	<div id="About_Me" class="About_Me">
-		<img src="addons/logo al 150.png" alt="Kharoontes" class="Image">
-                <div class="description-text">
-                    <h2 class="welcome">Bienvenidos!</h2>
-                    <h1 class="title"> Soy Kharoontes, <br> <span id="typed"></span></h1>
-                    <p class="description">
-                         ¡Actualmente aprendiendo cada vez más, sobre el desarrollo web. 
-			  Estudiante de informática, autodidacta y comprometido con avanzar
-			    mucho más!
-                        <br><br>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit
-						. Velit eum nam, beatae nulla excepturi, rem nostrum
-						quo ducimus in eveniet ipsum porro. Alias inventore
-						quibusdam voluptate incidunt tempora, illo ut.
-                        <br><br>
-						<button type="button" class="btn btn-dark"><a href="http://www.educoas.org/portal/bdigital/contenido/valzacchi/ValzacchiCapitulo-2New.pdf" style="width:100%; height:700px;" frameborder="0"></a>Curriculum Vitae</button>
-                    </p>
-                </div>
-	</div>
-</section>
+    <!-- Tarjetas de galería / proyectos -->
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="custom-card h-100 p-3">
+          <div class="bg-dark rounded-3 mb-3" style="height: 250px; background: #222;"></div>
+          <h5 class="text-white fw-bold">Proyecto Mobile .NET</h5>
+          <p class="text-muted small">Desarrollo multiplataforma y sincronización con Health Connect.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-card h-100 p-3">
+          <div class="bg-dark rounded-3 mb-3" style="height: 250px; background: #222;"></div>
+          <h5 class="text-white fw-bold">Editorial Service Catalog</h5>
+          <p class="text-muted small">Sistema de identidad visual con paletas profundas y tipografía moderna.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-card h-100 p-3">
+          <div class="bg-dark rounded-3 mb-3" style="height: 250px; background: #222;"></div>
+          <h5 class="text-white fw-bold">Fotografía & Branding</h5>
+          <p class="text-muted small">Producción y dirección visual integrada para marcas digitales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<!-- ------------------------------ PROJECTS ------------------------------- -->
-
-	<section>
-	<div  id="Projects" class="Projects" style="background-color:red ;width: 100%;margin: 0%;padding: 0%;">
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-	</div>
-</section>
-
-<!-- ------------------------------- CONTACT ------------------------------- -->
-
-<section>
-	<div id="Contact" class="Contact" style="background-color:orange;width: 100%;margin: 0%;padding: 0%;">
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-		<h1>Hello, world!</h1>
-	</div>
-</section>
-
-	<!-- ------------------------------- CONTACT ------------------------------- -->
-	
-	<footer class="bg-dark text-center text-white">
-		<!-- Grid container -->
-		<div class="container p-0 pb-0">
-		<!-- Section: Social media -->
-		<section class="mb-1 mt-1">
-			<!-- Twitter -->
-			<a class="btn  btn-dark  m-2" href="https://twitter.com/home?lang=es" target="_blank" role="button"
-	><i class="fab fa-twitter"></i
-			></a>
-			<!-- Instagram -->
-			<a class="btn  btn-dark m-2" href="https://www.instagram.com/sekaimahou/" target="_blank" role="button"
-			><i class="fab fa-instagram"></i
-			></a>
-	  
-			<!-- Linkedin -->
-			<a class="btn  btn-dark  m-2" href="https://co.linkedin.com/" target="_blank" role="button"
-			  ><i class="fab fa-linkedin-in"></i
-			></a>
-	  
-			<!-- Github -->
-			<a class="btn  btn-dark  m-2" href="https://github.com/Kharoontes" target="_blank" role="button"
-			  ><i class="fab fa-github"></i
-			></a>
-		  </section>
-		  <!-- Section: Social media -->
-		</div>
-		<!-- Grid container -->
-	  
-		<!-- Copyright -->
-		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-		  © 2022 Copyright:
-		  <a class="text-white" href="www.github.com/Kharoontes">Kharoontes</a>
-		</div>
-		<!-- Copyright -->
-	  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
