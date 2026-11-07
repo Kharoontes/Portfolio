@@ -1,0 +1,125 @@
+:root {
+  --bg-dark: #09090b;
+  --card-bg: #121215;
+  --accent-orange: #ff5522;
+  --accent-gradient: linear-gradient(135deg, #ff7733 0%, #e63900 100%);
+  --hero-bg: radial-gradient(circle at 75% 30%, #5a1a09 0%, #1e0904 45%, #0e0d11 85%);
+  --border-color: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #f4f4f5;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.text-accent {
+  color: var(--accent-orange) !important;
+}
+
+.text-accent-gradient {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: rgba(9, 9, 11, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-link {
+  color: #a1a1aa;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #ffffff;
+}
+
+/* Hero Section */
+.hero-wrapper {
+  background: var(--hero-bg);
+  border-radius: 2rem;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img {
+  max-height: 480px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.btn-accent {
+  background: var(--accent-gradient);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 85, 34, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-accent:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 85, 34, 0.45);
+}
+
+.btn-outline-custom {
+  border: 1px solid var(--border-color);
+  color: #a1a1aa;
+  background-color: transparent;
+}
+
+.btn-outline-custom:hover, .btn-outline-custom.active {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Brands Banner */
+.brands-banner {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.brand-item {
+  color: #a1a1aa;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Cards */
+.card-custom {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 85, 34, 0.3);
+}
+
+/* Form Controls */
+.form-control-custom {
+  background-color: #1a1a1e;
+  border: 1px solid var(--border-color);
+  color: #fff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+
+.form-control-custom:focus {
+  background-color: #1a1a1e;
+  border-color: var(--accent-orange);
+  color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(255, 85, 34, 0.15);
+}
