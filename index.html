@@ -1,110 +1,194 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>José Dario Novoa | Portfolio</title>
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>José Dario Novoa — Portfolio</title>
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark py-4">
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
     <div class="container">
-      <a class="navbar-brand fw-bold text-white" href="#">Folioblor</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand fw-bold" href="#">Folioblox</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav align-items-center gap-4">
-          <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
-          <li class="nav-item">
-            <a href="#contact" class="btn btn-primary-custom btn-sm">Get in touch</a>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-4">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item mt-3 mt-lg-0">
+            <a href="#contact" class="btn btn-accent rounded-pill px-4">
+              Get in touch <i class="bi bi-arrow-up-right-circle-fill ms-1"></i>
+            </a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero-section container my-5">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-7">
-        <span class="text-uppercase tracking-wider text-muted small fw-semibold">Hey, I'm a</span>
-        <h1 class="display-3 fw-bold text-white mt-2 mb-4">Software Developer & Creative Director</h1>
-        <p class="text-muted lead mb-5">Construyendo soluciones de software, ingeniería y experiencias visuales que conectan y convierten.</p>
+  <!-- Hero Container -->
+  <div class="container pt-5 mt-4">
+    <header id="home" class="hero-wrapper p-4 p-md-5">
+      <div class="row align-items-center g-4">
         
-        <!-- Grid de especialidades (Estilo de la imagen de referencia) -->
-        <div class="row g-3 text-muted small">
-          <div class="col-6 col-md-3">
-            <span class="text-white fw-bold d-block">01</span> Brand Strategy
+        <!-- Hero Text -->
+        <div class="col-lg-7 z-2">
+          <span class="text-uppercase tracking-wider small fw-semibold text-white-50">Hey, I'm a</span>
+          <h1 class="display-2 fw-extrabold text-white my-3 tracking-tight">
+            Creative <br><span class="text-accent-gradient">Director</span>
+          </h1>
+          
+          <div class="hero-quote mt-4 mb-5 pe-lg-5">
+            <p class="fs-5 fw-medium text-white mb-1">Great design should feel invisible.</p>
+            <p class="text-secondary small">From code to language, I build products, architectures and visual brands that convert.</p>
           </div>
-          <div class="col-6 col-md-3">
-            <span class="text-white fw-bold d-block">02</span> UI/UX Design
-          </div>
-          <div class="col-6 col-md-3">
-            <span class="text-white fw-bold d-block">03</span> Software & .NET
-          </div>
-          <div class="col-6 col-md-3">
-            <span class="text-white fw-bold d-block">04</span> Photography
+
+          <!-- Services Bar -->
+          <div class="row g-3 pt-3 border-top border-secondary border-opacity-25">
+            <div class="col-6 col-sm-3">
+              <span class="d-block text-accent fw-bold small">#01</span>
+              <span class="text-light small fw-medium">Brand Strategy</span>
+            </div>
+            <div class="col-6 col-sm-3">
+              <span class="d-block text-accent fw-bold small">#02</span>
+              <span class="text-light small fw-medium">UI/UX Design</span>
+            </div>
+            <div class="col-6 col-sm-3">
+              <span class="d-block text-accent fw-bold small">#03</span>
+              <span class="text-light small fw-medium">Software & .NET</span>
+            </div>
+            <div class="col-6 col-sm-3">
+              <span class="d-block text-accent fw-bold small">#04</span>
+              <span class="text-light small fw-medium">Photography</span>
+            </div>
           </div>
         </div>
+
+        <!-- Hero Image -->
+        <div class="col-lg-5 text-center position-relative">
+          <div class="hero-img-container">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Portrait" class="img-fluid rounded-5 hero-img">
+          </div>
+        </div>
+
       </div>
-      <div class="col-lg-5 text-center">
-        <!-- Imagen o silueta principal -->
-        <div class="custom-card p-3">
-          <img src="tu-imagen.jpg" alt="Perfil" class="img-fluid rounded-4">
-        </div>
+    </header>
+
+    <!-- Brands Banner -->
+    <div class="brands-banner my-4 p-4 rounded-4 d-flex flex-wrap justify-content-between align-items-center gap-4">
+      <span class="text-secondary small fw-medium">Trusted by Brands I've Helped Shape</span>
+      <div class="d-flex flex-wrap align-items-center gap-4 gap-md-5">
+        <span class="brand-item"><i class="bi bi-circle-square me-2"></i>Supa Blox</span>
+        <span class="brand-item"><i class="bi bi-hourglass-split me-2"></i>Hype Blox</span>
+        <span class="brand-item"><i class="bi bi-record-circle me-2"></i>Frame Blox</span>
+        <span class="brand-item"><i class="bi bi-layers-fill me-2"></i>Ultra Blox</span>
       </div>
     </div>
-  </header>
+  </div>
 
-  <!-- Section: Proyectos / Galería -->
+  <!-- Projects Section -->
   <section id="projects" class="container py-5">
-    <div class="row mb-5 align-items-end">
-      <div class="col-md-6">
-        <span class="text-orange small fw-semibold text-uppercase" style="color: var(--accent-color);">Behind the Designs</span>
-        <h2 class="display-5 fw-bold text-white mt-1">Shaping Experiences That Make Life Simpler</h2>
+    <div class="row mb-4 align-items-end">
+      <div class="col-md-7">
+        <span class="text-accent small text-uppercase tracking-wider fw-bold">Behind the Designs</span>
+        <h2 class="display-5 fw-bold text-white mt-2">Shaping Experiences That Make Life Simpler</h2>
       </div>
-      <div class="col-md-6 text-md-end mt-3 mt-md-0">
-        <p class="text-muted mb-0">Enfoque en interfaces limpias, intuitivas y código robusto que resuelven problemas reales.</p>
+      <div class="col-md-5 mt-3 mt-md-0">
+        <p class="text-secondary mb-0">I'm a product designer and engineer focused on building clean, intuitive interfaces that solve real-world problems.</p>
       </div>
     </div>
 
-    <!-- Tarjetas de galería / proyectos -->
+    <!-- Filter Buttons -->
+    <div class="d-flex gap-2 mb-4 overflow-auto pb-2">
+      <button class="btn btn-outline-custom active btn-sm rounded-pill px-3 filter-btn" data-filter="all">All Projects</button>
+      <button class="btn btn-outline-custom btn-sm rounded-pill px-3 filter-btn" data-filter="dev">Software & Apps</button>
+      <button class="btn btn-outline-custom btn-sm rounded-pill px-3 filter-btn" data-filter="design">Branding & UI</button>
+      <button class="btn btn-outline-custom btn-sm rounded-pill px-3 filter-btn" data-filter="photo">Photography</button>
+    </div>
+
+    <!-- Project Cards Grid -->
     <div class="row g-4">
-      <div class="col-md-4">
-        <div class="custom-card h-100 p-3">
-          <div class="bg-dark rounded-3 mb-3" style="height: 250px; background: #222;"></div>
-          <h5 class="text-white fw-bold">Proyecto Mobile .NET</h5>
-          <p class="text-muted small">Desarrollo multiplataforma y sincronización con Health Connect.</p>
+      <div class="col-md-4 project-item" data-category="dev">
+        <div class="card card-custom h-100 p-3">
+          <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Project 1">
+          </div>
+          <div class="card-body p-0">
+            <span class="badge bg-secondary-subtle text-secondary mb-2">Software / .NET</span>
+            <h5 class="card-title text-white fw-bold">Health & Step Tracker</h5>
+            <p class="card-text text-secondary small">Custom mobile app engineered with Health Connect and SVG activity maps.</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="custom-card h-100 p-3">
-          <div class="bg-dark rounded-3 mb-3" style="height: 250px; background: #222;"></div>
-          <h5 class="text-white fw-bold">Editorial Service Catalog</h5>
-          <p class="text-muted small">Sistema de identidad visual con paletas profundas y tipografía moderna.</p>
+
+      <div class="col-md-4 project-item" data-category="design">
+        <div class="card card-custom h-100 p-3">
+          <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Project 2">
+          </div>
+          <div class="card-body p-0">
+            <span class="badge bg-secondary-subtle text-secondary mb-2">Branding</span>
+            <h5 class="card-title text-white fw-bold">Editorial Catalog & Kit</h5>
+            <p class="card-text text-secondary small">Cohesive design system with petroleum blue, teal, and terracotta accents.</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="custom-card h-100 p-3">
-          <div class="bg-dark rounded-3 mb-3" style="height: 250px; background: #222;"></div>
-          <h5 class="text-white fw-bold">Fotografía & Branding</h5>
-          <p class="text-muted small">Producción y dirección visual integrada para marcas digitales.</p>
+
+      <div class="col-md-4 project-item" data-category="photo">
+        <div class="card card-custom h-100 p-3">
+          <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Project 3">
+          </div>
+          <div class="card-body p-0">
+            <span class="badge bg-secondary-subtle text-secondary mb-2">Photography</span>
+            <h5 class="card-title text-white fw-bold">Product Shoot Studio</h5>
+            <p class="card-text text-secondary small">High-contrast product photography direction for digital visual identity.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Contact Section -->
+  <section id="contact" class="container py-5">
+    <div class="card card-custom p-4 p-md-5">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <span class="text-accent small text-uppercase tracking-wider fw-bold">Get In Touch</span>
+          <h2 class="display-6 fw-bold text-white mt-2">Let's Build Something Meaningful Together</h2>
+          <p class="text-secondary mt-3">Ready to start your next software project, brand identity, or photography campaign?</p>
+        </div>
+        <div class="col-lg-6">
+          <form id="contactForm" class="d-flex flex-column gap-3">
+            <input type="text" class="form-control form-control-custom" placeholder="Your Name" required>
+            <input type="email" class="form-control form-control-custom" placeholder="Your Email" required>
+            <textarea class="form-control form-control-custom" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-accent rounded-pill py-2 fw-semibold">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container py-4 text-center border-top border-secondary border-opacity-10 text-secondary small">
+    <p class="mb-0">&copy; 2026 Folioblox. Built with HTML, Bootstrap & CSS.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
