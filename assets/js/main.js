@@ -71,23 +71,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  let currentLang = 'es';
+// Control de la Lista Desplegable de Idiomas con Banderas
   const langOptions = document.querySelectorAll('.lang-option');
   const currentLangText = document.getElementById('currentLangText');
-  const checkEs = document.getElementById('check-es');
-  const checkEn = document.getElementById('check-en');
+  const currentLangFlag = document.getElementById('currentLangFlag');
 
-  // 2. Función Principal para Cambiar Idioma
   function updateLanguage(lang) {
     currentLang = lang;
 
-    // Cambiar todos los elementos que tengan el atributo data-i18n
+    // Cambiar textos con data-i18n
     document.querySelectorAll('[data-i18n]').forEach(element => {
       const key = element.getAttribute('data-i18n');
       if (translations[lang] && translations[lang][key]) {
         element.textContent = translations[lang][key];
       }
     });
+
+    // Cambiar placeholders del formulario
+    const inputName = document.getElementById('inputName');
+    const inputEmail = document.getElementById('inputEmail');
+    const inputMsg = document.getElementById('inputMsg');
+
+    if (inputName) inputName.placeholder = translations[lang].ph_name;
+    if (inputEmail) inputEmail.placeholder = translations[lang].ph_email;
+    if (inputMsg) inputMsg.placeholder = translations[lang].ph_msg;
+
+    // Actualizar texto y bandera del botón principal
+    if (lang === 'es') {
+      currentLangText.textContent = 'ES';
+      currentLangFlag.textContent = '🇨🇴';
+    } else {
+      currentLangText.textContent = 'EN';
+      currentLangFlag.textContent = '🇺🇸';
+    }
+
+    // Actualizar clase activa en el menú
+    langOptions.forEach(opt => opt.classList.remove('active'));
+    document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+  }
+
+  langOptions.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const lang = btn.getAttribute('data-lang');
+      updateLanguage(lang);
+    });
+  });
 
     // Cambiar placeholders del formulario
     const inputName = document.getElementById('inputName');
