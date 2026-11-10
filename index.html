@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>José Dario Novoa — Software, Design & Photography</title>
-
+  
   <!-- Bootstrap 5.3 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
   <!-- Navbar -->
@@ -29,27 +26,26 @@
       <div class="collapse navbar-collapse" id="navContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-3">
           <li class="nav-item"><a class="nav-link active" href="#home" data-i18n="nav_home">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">Sobre mí</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">Proyectos</a></li>
-
+          
           <!-- Dropdown de Idioma con Banderas -->
           <li class="nav-item dropdown my-2 my-lg-0">
-            <button class="btn btn-outline-custom rounded-pill px-3 py-2 dropdown-toggle fw-semibold" type="button"
-              id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.85rem;">
+            <button class="btn btn-outline-custom rounded-pill px-3 py-2 dropdown-toggle fw-semibold" 
+                    type="button" 
+                    id="languageDropdown" 
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false" 
+                    style="font-size: 0.85rem;">
               <span id="currentLangFlag">🇨🇴</span> <span id="currentLangText">ES</span>
             </button>
-            <ul
-              class="dropdown-menu dropdown-menu-dark dropdown-menu-end rounded-4 shadow border border-secondary border-opacity-25 mt-2"
-              aria-labelledby="languageDropdown">
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end rounded-4 shadow border border-secondary border-opacity-25 mt-2" aria-labelledby="languageDropdown">
               <li>
-                <button class="dropdown-item lang-option active rounded-3 px-3 py-2 d-flex align-items-center gap-2"
-                  type="button" data-lang="es">
+                <button class="dropdown-item lang-option active rounded-3 px-3 py-2 d-flex align-items-center gap-2" type="button" data-lang="es">
                   <span>🇨🇴</span> <span>Español</span>
                 </button>
               </li>
               <li>
-                <button class="dropdown-item lang-option rounded-3 px-3 py-2 d-flex align-items-center gap-2"
-                  type="button" data-lang="en">
+                <button class="dropdown-item lang-option rounded-3 px-3 py-2 d-flex align-items-center gap-2" type="button" data-lang="en">
                   <span>🇺🇸</span> <span>English</span>
                 </button>
               </li>
@@ -75,19 +71,17 @@
   <div class="container pt-5 mt-4">
     <header id="home" class="hero-wrapper p-4 p-md-5">
       <div class="row align-items-center g-4">
-
+        
         <!-- Hero Text -->
         <div class="col-lg-7 z-2">
-          <span class="text-uppercase tracking-wider small fw-semibold text-white-50" data-i18n="hero_sub">Hola, soy
-            José Dario</span>
+          <span class="text-uppercase tracking-wider small fw-semibold text-white-50" data-i18n="hero_sub">Hola, soy José Dario</span>
           <h1 class="display-2 fw-extrabold text-white my-3 tracking-tight">
             Software & <br><span class="text-accent-gradient" data-i18n="hero_title">Estudio Creativo</span>
           </h1>
-
+          
           <div class="hero-quote mt-4 mb-5 pe-lg-5">
             <p class="fs-5 fw-medium text-white mb-1" data-i18n="hero_quote">El buen diseño debe sentirse invisible.</p>
-            <p class="text-secondary small" data-i18n="hero_desc">Consultor independiente especializado en desarrollo de
-              software (.NET / Mobile), diseño gráfico y fotografía profesional.</p>
+            <p class="text-secondary small" data-i18n="hero_desc">Consultor independiente especializado en desarrollo de software (.NET / Mobile), diseño gráfico y fotografía profesional.</p>
           </div>
 
           <!-- Services Bar -->
@@ -114,8 +108,7 @@
         <!-- Hero Image -->
         <div class="col-lg-5 text-center position-relative">
           <div class="hero-img-container">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
-              alt="José Dario" class="img-fluid rounded-5 hero-img">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="José Dario" class="img-fluid rounded-5 hero-img">
           </div>
         </div>
 
@@ -138,83 +131,101 @@
   <section id="projects" class="container py-5">
     <div class="row mb-4 align-items-end">
       <div class="col-md-7">
-        <span class="text-accent small text-uppercase tracking-wider fw-bold" data-i18n="proj_sub">Repositorios y
-          Trabajos</span>
-        <h2 class="display-5 fw-bold text-white mt-2" data-i18n="proj_title">Creando Experiencias Digitales Que Importan
-        </h2>
+        <span class="text-accent small text-uppercase tracking-wider fw-bold" data-i18n="proj_sub">Repositorios y Trabajos</span>
+        <h2 class="display-5 fw-bold text-white mt-2" data-i18n="proj_title">Creando Experiencias Digitales Que Importan</h2>
       </div>
       <div class="col-md-5 mt-3 mt-md-0">
-        <p class="text-secondary mb-0" data-i18n="proj_desc">Explora repositorios de código fuente destacados y sistemas
-          creativos construidos desde cero.</p>
+        <p class="text-secondary mb-0" data-i18n="proj_desc">Explora repositorios de código fuente destacados y sistemas creativos construidos desde cero.</p>
       </div>
     </div>
 
     <!-- Filter Buttons -->
     <div class="d-flex gap-2 mb-4 overflow-auto pb-2">
-      <button class="btn btn-outline-custom active btn-sm rounded-pill px-3 filter-btn" data-filter="all"
-        data-i18n="btn_all">Todos</button>
-      <button class="btn btn-outline-custom btn-sm rounded-pill px-3 filter-btn" data-filter="dev"
-        data-i18n="btn_dev">Software & Apps</button>
-      <button class="btn btn-outline-custom btn-sm rounded-pill px-3 filter-btn" data-filter="design"
-        data-i18n="btn_design">Branding & UI</button>
-      <button class="btn btn-outline-custom btn-sm rounded-pill px-3 filter-btn" data-filter="photo"
-        data-i18n="btn_photo">Fotografía</button>
+      <button class="btn btn-outline-custom active btn-sm rounded-pill px-3 filter-btn" data-filter="all" data-i18n="btn_all">Todos</button>
+      <button class="btn btn-outline-custom btn-sm rounded-pill px-3 filter-btn" data-filter="dev" data-i18n="btn_dev">Software & Apps</button>
+      <button class="btn btn-outline-custom btn-sm rounded-pill px-3 filter-btn" data-filter="design" data-i18n="btn_design">Branding & UI</button>
+      <button class="btn btn-outline-custom btn-sm rounded-pill px-3 filter-btn" data-filter="photo" data-i18n="btn_photo">Fotografía</button>
     </div>
 
     <!-- Project Cards Grid -->
     <div class="row g-4">
+      
+      <!-- 1. Portfolio -->
       <div class="col-md-4 project-item" data-category="dev">
         <div class="card card-custom h-100 p-3">
           <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
-              class="img-fluid" alt="Portfolio Repo">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Portfolio">
           </div>
           <div class="card-body p-0">
-            <span class="badge bg-secondary-subtle text-secondary mb-2">HTML / Bootstrap</span>
-            <h5 class="card-title text-white fw-bold">Portfolio Source</h5>
-            <p class="card-text text-secondary small" data-i18n="p1_desc">Repositorio oficial del portafolio personal
-              alojado directamente en GitHub Pages.</p>
-            <a href="https://github.com/Kharoontes/Portfolio" target="_blank"
-              class="btn btn-link text-accent p-0 text-decoration-none small mt-2">
+            <span class="badge bg-secondary-subtle text-secondary mb-2">HTML / Bootstrap / JS</span>
+            <h5 class="card-title text-white fw-bold">Portfolio</h5>
+            <p class="card-text text-secondary small" data-i18n="p1_desc">Repositorio oficial del portafolio personal interactivo y bilingüe alojado en GitHub Pages.</p>
+            <a href="https://github.com/Kharoontes/Portfolio" target="_blank" class="btn btn-link text-accent p-0 text-decoration-none small mt-2">
               <span data-i18n="link_repo">Ver Repositorio</span> <i class="bi bi-arrow-right"></i>
             </a>
           </div>
         </div>
       </div>
 
+      <!-- 2. KharoontesBot -->
       <div class="col-md-4 project-item" data-category="dev">
         <div class="card card-custom h-100 p-3">
           <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80"
-              class="img-fluid" alt="KharoontesBot">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="KharoontesBot">
           </div>
           <div class="card-body p-0">
             <span class="badge bg-secondary-subtle text-secondary mb-2">Bot / Integration</span>
             <h5 class="card-title text-white fw-bold">KharoontesBot</h5>
-            <p class="card-text text-secondary small" data-i18n="p2_desc">Motor de comandos personalizados e
-              integraciones web diseñadas para sistemas Nightbot.</p>
-            <a href="https://github.com/Kharoontes/KharoontesBot" target="_blank"
-              class="btn btn-link text-accent p-0 text-decoration-none small mt-2">
+            <p class="card-text text-secondary small" data-i18n="p2_desc">Comandos personalizados e integraciones web avanzadas diseñadas para Nightbot.</p>
+            <a href="https://github.com/Kharoontes/KharoontesBot" target="_blank" class="btn btn-link text-accent p-0 text-decoration-none small mt-2">
               <span data-i18n="link_repo">Ver Repositorio</span> <i class="bi bi-arrow-right"></i>
             </a>
           </div>
         </div>
       </div>
 
+      <!-- 3. Editorial Brand Kit (Diseño UI/UX) -->
       <div class="col-md-4 project-item" data-category="design">
         <div class="card card-custom h-100 p-3">
           <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80"
-              class="img-fluid" alt="Design System">
+            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Brand Kit">
           </div>
           <div class="card-body p-0">
             <span class="badge bg-secondary-subtle text-secondary mb-2">UI/UX & Branding</span>
-            <h5 class="card-title text-white fw-bold">Editorial Brand Kit</h5>
-            <p class="card-text text-secondary small" data-i18n="p3_desc">Catálogo de servicios editorial de alta
-              fidelidad con paletas azul petróleo, terracota y crema.</p>
+            <h5 class="card-title text-white fw-bold">Editorial Service Catalog</h5>
+            <p class="card-text text-secondary small" data-i18n="p3_desc">Sistema de identidad visual con paletas profundas de azul petróleo, teal, crema y terracota.</p>
           </div>
         </div>
       </div>
+
+      <!-- 4. Mobile Step Tracker (.NET) -->
+      <div class="col-md-4 project-item" data-category="dev">
+        <div class="card card-custom h-100 p-3">
+          <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Step Tracker">
+          </div>
+          <div class="card-body p-0">
+            <span class="badge bg-secondary-subtle text-secondary mb-2">.NET 10 / Mobile</span>
+            <h5 class="card-title text-white fw-bold">Mobile Step Tracker App</h5>
+            <p class="card-text text-secondary small" data-i18n="p4_desc">Aplicación móvil multiplataforma integrada con Health Connect y mapas de contribución estilo GitHub.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Professional Photography -->
+      <div class="col-md-4 project-item" data-category="photo">
+        <div class="card card-custom h-100 p-3">
+          <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Photography">
+          </div>
+          <div class="card-body p-0">
+            <span class="badge bg-secondary-subtle text-secondary mb-2">Photography Studio</span>
+            <h5 class="card-title text-white fw-bold">Creative Photography & Direction</h5>
+            <p class="card-text text-secondary small" data-i18n="p5_desc">Producción fotográfica y dirección visual enfocada en productos e identidades de marca digitales.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -223,22 +234,16 @@
     <div class="card card-custom p-4 p-md-5">
       <div class="row g-4 align-items-center">
         <div class="col-lg-6">
-          <span class="text-accent small text-uppercase tracking-wider fw-bold" data-i18n="contact_sub">Ponte en
-            contacto</span>
-          <h2 class="display-6 fw-bold text-white mt-2" data-i18n="contact_title">Construyamos Algo Significativo Juntos
-          </h2>
-          <p class="text-secondary mt-3" data-i18n="contact_desc">¿Listo para iniciar tu próximo proyecto de software,
-            diseño de marca o campaña fotográfica?</p>
+          <span class="text-accent small text-uppercase tracking-wider fw-bold" data-i18n="contact_sub">Ponte en contacto</span>
+          <h2 class="display-6 fw-bold text-white mt-2" data-i18n="contact_title">Construyamos Algo Significativo Juntos</h2>
+          <p class="text-secondary mt-3" data-i18n="contact_desc">¿Listo para iniciar tu próximo proyecto de software, diseño de marca o campaña fotográfica?</p>
         </div>
         <div class="col-lg-6">
           <form id="contactForm" class="d-flex flex-column gap-3">
             <input type="text" class="form-control form-control-custom" id="inputName" placeholder="Tu Nombre" required>
-            <input type="email" class="form-control form-control-custom" id="inputEmail" placeholder="Tu Email"
-              required>
-            <textarea class="form-control form-control-custom" id="inputMsg" rows="4" placeholder="Tu Mensaje"
-              required></textarea>
-            <button type="submit" class="btn btn-accent rounded-pill py-2 fw-semibold" data-i18n="btn_send">Enviar
-              Mensaje</button>
+            <input type="email" class="form-control form-control-custom" id="inputEmail" placeholder="Tu Email" required>
+            <textarea class="form-control form-control-custom" id="inputMsg" rows="4" placeholder="Tu Mensaje" required></textarea>
+            <button type="submit" class="btn btn-accent rounded-pill py-2 fw-semibold" data-i18n="btn_send">Enviar Mensaje</button>
           </form>
         </div>
       </div>
@@ -254,5 +259,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
-
 </html>

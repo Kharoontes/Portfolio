@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const translations = {
     es: {
       nav_home: "Inicio",
-      nav_about: "Sobre mí",
       nav_projects: "Proyectos",
       nav_contact: "Contacto",
       hero_sub: "Hola, soy José Dario",
@@ -22,9 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
       btn_dev: "Software & Apps",
       btn_design: "Branding & UI",
       btn_photo: "Fotografía",
-      p1_desc: "Repositorio oficial del portafolio personal alojado directamente en GitHub Pages.",
-      p2_desc: "Motor de comandos personalizados e integraciones web diseñadas para sistemas Nightbot.",
-      p3_desc: "Catálogo de servicios editorial de alta fidelidad con paletas azul petróleo, terracota y crema.",
+      p1_desc: "Repositorio oficial del portafolio personal interactivo y bilingüe alojado en GitHub Pages.",
+      p2_desc: "Comandos personalizados e integraciones web avanzadas diseñadas para sistemas Nightbot.",
+      p3_desc: "Sistema de identidad visual con paletas profundas de azul petróleo, teal, crema y terracota.",
+      p4_desc: "Aplicación móvil multiplataforma integrada con Health Connect y mapas de contribución estilo GitHub.",
+      p5_desc: "Producción fotográfica y dirección visual enfocada en productos e identidades de marca digitales.",
       link_repo: "Ver Repositorio",
       contact_sub: "Ponte en contacto",
       contact_title: "Construyamos Algo Significativo Juntos",
@@ -37,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     en: {
       nav_home: "Home",
-      nav_about: "About",
       nav_projects: "Projects",
       nav_contact: "Get in touch",
       hero_sub: "Hey, I'm José Dario",
@@ -56,9 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
       btn_dev: "Software & Apps",
       btn_design: "Branding & UI",
       btn_photo: "Photography",
-      p1_desc: "Official personal portfolio repository hosted directly on GitHub Pages.",
-      p2_desc: "Custom commands engine and web integrations designed for Nightbot systems.",
-      p3_desc: "High-fidelity editorial service catalog with petroleum blue, teal, and terracotta accents.",
+      p1_desc: "Official personal interactive and bilingual portfolio repository hosted on GitHub Pages.",
+      p2_desc: "Custom commands and advanced web integrations designed for Nightbot systems.",
+      p3_desc: "Visual identity system featuring deep petroleum blue, teal, cream, and terracotta accents.",
+      p4_desc: "Cross-platform mobile application integrated with Health Connect and GitHub-style activity maps.",
+      p5_desc: "Photographic production and visual direction focused on products and digital brand identities.",
       link_repo: "View Repository",
       contact_sub: "Get In Touch",
       contact_title: "Let's Build Something Meaningful Together",
@@ -71,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-// Control de la Lista Desplegable de Idiomas con Banderas
+  let currentLang = 'es';
   const langOptions = document.querySelectorAll('.lang-option');
   const currentLangText = document.getElementById('currentLangText');
   const currentLangFlag = document.getElementById('currentLangFlag');
@@ -107,7 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Actualizar clase activa en el menú
     langOptions.forEach(opt => opt.classList.remove('active'));
-    document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+    const selectedOption = document.querySelector(`[data-lang="${lang}"]`);
+    if (selectedOption) selectedOption.classList.add('active');
   }
 
   langOptions.forEach(btn => {
@@ -118,43 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-    // Cambiar placeholders del formulario
-    const inputName = document.getElementById('inputName');
-    const inputEmail = document.getElementById('inputEmail');
-    const inputMsg = document.getElementById('inputMsg');
-
-    if (inputName) inputName.placeholder = translations[lang].ph_name;
-    if (inputEmail) inputEmail.placeholder = translations[lang].ph_email;
-    if (inputMsg) inputMsg.placeholder = translations[lang].ph_msg;
-
-    // Cambiar el texto del botón principal del dropdown
-    if (currentLangText) currentLangText.textContent = lang.toUpperCase();
-
-    // Actualizar los checks y la clase activa en el menú
-    langOptions.forEach(opt => opt.classList.remove('active'));
-    if (lang === 'es') {
-      const optEs = document.querySelector('[data-lang="es"]');
-      if (optEs) optEs.classList.add('active');
-      if (checkEs) checkEs.classList.remove('d-none');
-      if (checkEn) checkEn.classList.add('d-none');
-    } else {
-      const optEn = document.querySelector('[data-lang="en"]');
-      if (optEn) optEn.classList.add('active');
-      if (checkEs) checkEs.classList.add('d-none');
-      if (checkEn) checkEn.classList.remove('d-none');
-    }
-  }
-
-  // Escuchar el clic en cada opción de idioma
-  langOptions.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const lang = btn.getAttribute('data-lang');
-      updateLanguage(lang);
-    });
-  });
-
-  // 3. Filtro de Proyectos
+  // 2. Filtro de Proyectos
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectItems = document.querySelectorAll('.project-item');
 
@@ -175,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Formulario de Contacto
+  // 3. Formulario de Contacto
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
