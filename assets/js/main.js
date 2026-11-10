@@ -71,21 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+// 2. Switch de Idioma Interactivo (Estilo Botón de Contacto)
   let currentLang = 'es';
-  const langEsBtn = document.getElementById('lang-es');
-  const langEnBtn = document.getElementById('lang-en');
+  const langToggleBtn = document.getElementById('langToggleBtn');
+  const langText = document.getElementById('langText');
 
   function setLanguage(lang) {
     currentLang = lang;
-
-    // Actualizar botones de idioma activos
-    if (lang === 'es') {
-      langEsBtn.classList.add('active');
-      langEnBtn.classList.remove('active');
-    } else {
-      langEnBtn.classList.add('active');
-      langEsBtn.classList.remove('active');
-    }
 
     // Cambiar textos con data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -99,11 +91,22 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('inputName').placeholder = translations[lang].ph_name;
     document.getElementById('inputEmail').placeholder = translations[lang].ph_email;
     document.getElementById('inputMsg').placeholder = translations[lang].ph_msg;
+
+    // Actualizar el texto del botón según el idioma actual
+    if (lang === 'es') {
+      langText.textContent = 'EN'; // Si está en español, muestra la opción para pasar a inglés
+    } else {
+      langText.textContent = 'ES'; // Si está en inglés, muestra la opción para pasar a español
+    }
   }
 
-  langEsBtn.addEventListener('click', () => setLanguage('es'));
-  langEnBtn.addEventListener('click', () => setLanguage('en'));
-
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', () => {
+      const newLang = currentLang === 'es' ? 'en' : 'es';
+      setLanguage(newLang);
+    });
+  }
+  
   // 2. Filtro de Proyectos
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectItems = document.querySelectorAll('.project-item');
