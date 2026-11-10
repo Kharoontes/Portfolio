@@ -71,70 +71,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-// 2. Switch de Idioma Interactivo (Estilo Botón de Contacto)
-  let currentLang = 'es';
-  const langToggleBtn = document.getElementById('langToggleBtn');
-  const langText = document.getElementById('langText');
+  // 2. Control de la Lista Desplegable de Idiomas
+  const langOptions = document.querySelectorAll('.lang-option');
+  const currentLangText = document.getElementById('currentLangText');
+  const checkEs = document.getElementById('check-es');
+  const checkEn = document.getElementById('check-en');
 
-  function setLanguage(lang) {
-    currentLang = lang;
-
-    // Cambiar textos con data-i18n
+  function changeLanguage(lang) {
+    // Actualizar los textos de la página
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (translations[lang][key]) {
+      if (translations[lang] && translations[lang][key]) {
         el.textContent = translations[lang][key];
       }
     });
 
-    // Cambiar placeholders del formulario
-    document.getElementById('inputName').placeholder = translations[lang].ph_name;
-    document.getElementById('inputEmail').placeholder = translations[lang].ph_email;
-    document.getElementById('inputMsg').placeholder = translations[lang].ph_msg;
+    // Actualizar los placeholders del formulario
+    const inputName = document.getElementById('inputName');
+    const inputEmail = document.getElementById('inputEmail');
+    const inputMsg = document.getElementById('inputMsg');
 
-    // Actualizar el texto del botón según el idioma actual
+    if (inputName) inputName.placeholder = translations[lang].ph_name;
+    if (inputEmail) inputEmail.placeholder = translations[lang].ph_email;
+    if (inputMsg) inputMsg.placeholder = translations[lang].ph_msg;
+
+    // Actualizar el texto del botón principal
+    currentLangText.textContent = lang.toUpperCase();
+
+    // Actualizar el estado visual de la lista desplegable (Checks y clase Active)
+    langOptions.forEach(opt => opt.classList.remove('active'));
     if (lang === 'es') {
-      langText.textContent = 'EN'; // Si está en español, muestra la opción para pasar a inglés
+      document.querySelector('[data-lang="es"]').classList.add('active');
+      checkEs.classList.remove('d-none');
+      checkEn.classList.add('d-none');
     } else {
-      langText.textContent = 'ES'; // Si está en inglés, muestra la opción para pasar a español
+      document.querySelector('[data-lang="en"]').classList.add('active');
+      checkEs.classList.add('d-none');
+      checkEn.classList.remove('d-none');
     }
   }
 
-  if (langToggleBtn) {
-    langToggleBtn.addEventListener('click', () => {
-      const newLang = currentLang === 'es' ? 'en' : 'es';
-      setLanguage(newLang);
-    });
-  }
-  
-  // 2. Filtro de Proyectos
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectItems = document.querySelectorAll('.project-item');
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filterValue = btn.getAttribute('data-filter');
-
-      projectItems.forEach(item => {
-        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
+  // Escuchar el clic en las opciones del menú desplegable
+  langOptions.forEach(option => {
+    option.addEventListener('click', (e) => {
+      const selectedLang = option.getAttribute('data-lang');
+      changeLanguage(selectedLang);
     });
   });
-
-  // 3. Envío de Formulario
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert(translations[currentLang].alert_msg);
-      contactForm.reset();
-    });
-  }
 });

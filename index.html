@@ -29,12 +29,29 @@
           <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">Sobre mí</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">Proyectos</a></li>
           
-          <!-- Language Switcher con el mismo estilo -->
-          <li class="nav-item my-2 my-lg-0">
-            <button type="button" class="btn btn-outline-custom rounded-pill px-3 py-2 text-uppercase fw-semibold" id="langToggleBtn" style="font-size: 0.85rem;">
-              <i class="bi bi-translate me-1"></i> <span id="langText">EN</span>
-            </button>
-          </li>
+          <!-- Dropdown de Idioma con el mismo estilo que el botón de contacto -->
+<li class="nav-item dropdown my-2 my-lg-0">
+  <button class="btn btn-outline-custom rounded-pill px-3 py-2 dropdown-toggle fw-semibold" 
+          type="button" 
+          id="languageDropdown" 
+          data-bs-toggle="dropdown" 
+          aria-expanded="false" 
+          style="font-size: 0.85rem;">
+    <i class="bi bi-translate me-1"></i> <span id="currentLangText">ES</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end rounded-4 shadow border border-secondary border-opacity-25 mt-2" aria-labelledby="languageDropdown">
+    <li>
+      <button class="dropdown-item lang-option active rounded-3 px-3 py-2" type="button" data-lang="es">
+        <i class="bi bi-check2 me-2 text-accent" id="check-es"></i> Español (ES)
+      </button>
+    </li>
+    <li>
+      <button class="dropdown-item lang-option rounded-3 px-3 py-2" type="button" data-lang="en">
+        <i class="bi bi-check2 me-2 text-accent d-none" id="check-en"></i> English (EN)
+      </button>
+    </li>
+  </ul>
+</li>
 
           <li class="nav-item">
             <a href="https://github.com/Kharoontes" target="_blank" class="btn btn-outline-custom rounded-pill px-3">
