@@ -143,8 +143,6 @@
     <div class="d-flex gap-2 mb-4 overflow-auto pb-2">
       <button class="btn btn-outline-custom active btn-sm rounded-pill px-3 filter-btn" data-filter="all" data-i18n="btn_all">Todos</button>
       <button class="btn btn-outline-custom btn-sm rounded-pill px-3 filter-btn" data-filter="dev" data-i18n="btn_dev">Software & Apps</button>
-      <button class="btn btn-outline-custom btn-sm rounded-pill px-3 filter-btn" data-filter="design" data-i18n="btn_design">Branding & UI</button>
-      <button class="btn btn-outline-custom btn-sm rounded-pill px-3 filter-btn" data-filter="photo" data-i18n="btn_photo">Fotografía</button>
     </div>
 
     <!-- Project Cards Grid -->
@@ -152,16 +150,18 @@
       
       <!-- 1. Portfolio -->
       <div class="col-md-4 project-item" data-category="dev">
-        <div class="card card-custom h-100 p-3">
-          <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Portfolio">
-          </div>
-          <div class="card-body p-0">
+        <div class="card card-custom h-100 p-3 d-flex flex-column justify-content-between">
+          <div>
+            <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Portfolio">
+            </div>
             <span class="badge bg-secondary-subtle text-secondary mb-2">HTML / Bootstrap / JS</span>
             <h5 class="card-title text-white fw-bold">Portfolio</h5>
             <p class="card-text text-secondary small" data-i18n="p1_desc">Repositorio oficial del portafolio personal interactivo y bilingüe alojado en GitHub Pages.</p>
-            <a href="https://github.com/Kharoontes/Portfolio" target="_blank" class="btn btn-link text-accent p-0 text-decoration-none small mt-2">
-              <span data-i18n="link_repo">Ver Repositorio</span> <i class="bi bi-arrow-right"></i>
+          </div>
+          <div class="mt-3">
+            <a href="https://github.com/Kharoontes/Portfolio" target="_blank" class="btn btn-outline-custom w-100 rounded-pill btn-sm py-2 fw-semibold">
+              <i class="bi bi-github me-1"></i> <span data-i18n="link_repo">Ver Repositorio</span>
             </a>
           </div>
         </div>
@@ -169,59 +169,19 @@
 
       <!-- 2. KharoontesBot -->
       <div class="col-md-4 project-item" data-category="dev">
-        <div class="card card-custom h-100 p-3">
-          <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="KharoontesBot">
-          </div>
-          <div class="card-body p-0">
+        <div class="card card-custom h-100 p-3 d-flex flex-column justify-content-between">
+          <div>
+            <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="KharoontesBot">
+            </div>
             <span class="badge bg-secondary-subtle text-secondary mb-2">Bot / Integration</span>
             <h5 class="card-title text-white fw-bold">KharoontesBot</h5>
-            <p class="card-text text-secondary small" data-i18n="p2_desc">Comandos personalizados e integraciones web avanzadas diseñadas para Nightbot.</p>
-            <a href="https://github.com/Kharoontes/KharoontesBot" target="_blank" class="btn btn-link text-accent p-0 text-decoration-none small mt-2">
-              <span data-i18n="link_repo">Ver Repositorio</span> <i class="bi bi-arrow-right"></i>
+            <p class="card-text text-secondary small" data-i18n="p2_desc">Comandos personalizados e integraciones web avanzadas diseñadas para sistemas Nightbot.</p>
+          </div>
+          <div class="mt-3">
+            <a href="https://github.com/Kharoontes/KharoontesBot" target="_blank" class="btn btn-outline-custom w-100 rounded-pill btn-sm py-2 fw-semibold">
+              <i class="bi bi-github me-1"></i> <span data-i18n="link_repo">Ver Repositorio</span>
             </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. Editorial Brand Kit (Diseño UI/UX) -->
-      <div class="col-md-4 project-item" data-category="design">
-        <div class="card card-custom h-100 p-3">
-          <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Brand Kit">
-          </div>
-          <div class="card-body p-0">
-            <span class="badge bg-secondary-subtle text-secondary mb-2">UI/UX & Branding</span>
-            <h5 class="card-title text-white fw-bold">Editorial Service Catalog</h5>
-            <p class="card-text text-secondary small" data-i18n="p3_desc">Sistema de identidad visual con paletas profundas de azul petróleo, teal, crema y terracota.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. Mobile Step Tracker (.NET) -->
-      <div class="col-md-4 project-item" data-category="dev">
-        <div class="card card-custom h-100 p-3">
-          <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Step Tracker">
-          </div>
-          <div class="card-body p-0">
-            <span class="badge bg-secondary-subtle text-secondary mb-2">.NET 10 / Mobile</span>
-            <h5 class="card-title text-white fw-bold">Mobile Step Tracker App</h5>
-            <p class="card-text text-secondary small" data-i18n="p4_desc">Aplicación móvil multiplataforma integrada con Health Connect y mapas de contribución estilo GitHub.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5. Professional Photography -->
-      <div class="col-md-4 project-item" data-category="photo">
-        <div class="card card-custom h-100 p-3">
-          <div class="card-img-wrapper rounded-4 mb-3 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" class="img-fluid" alt="Photography">
-          </div>
-          <div class="card-body p-0">
-            <span class="badge bg-secondary-subtle text-secondary mb-2">Photography Studio</span>
-            <h5 class="card-title text-white fw-bold">Creative Photography & Direction</h5>
-            <p class="card-text text-secondary small" data-i18n="p5_desc">Producción fotográfica y dirección visual enfocada en productos e identidades de marca digitales.</p>
           </div>
         </div>
       </div>
